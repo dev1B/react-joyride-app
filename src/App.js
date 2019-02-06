@@ -5,6 +5,7 @@ import TodoList from "./components/TodoList";
 import VisibilityFilters from "./components/VisibilityFilters";
 import { Container, Row, Col } from "reactstrap";
 import MainForm from "./components/MainForm";
+import Workspace from "./containers/Workspace";
 
 class App extends Component {
   render() {
@@ -16,6 +17,15 @@ class App extends Component {
             <h1>Hello =)</h1>
           </Col>
         </Row>
+      </Container>
+      <Container fluid={true}>
+        <Row>
+          <Col>
+            <Workspace/>
+          </Col>
+        </Row>
+      </Container>
+    <Container>
         <Row>
           <Col>
             <AddTodo/>
@@ -23,11 +33,13 @@ class App extends Component {
             <TodoList/>
           </Col>
         </Row>
+
         <Row>
           <Col>
             <MainForm/>
           </Col>
         </Row>
+
       </Container>
     </div>
     );
